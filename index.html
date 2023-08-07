@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1 id="title">FreeCodeCamp Survey Form Project</h1>
+      <p id="description">This is my <strong>first</strong> project</p>
+    </header>
+    <form
+      action="https://register-demo.freecodecamp.org"
+      method="post"
+      id="survey-form"
+    >
+      <fieldset>
+        <label for="name" id="name-label">
+          Enter Your Name:
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="ex: Ahmed Abdo"
+          />
+        </label>
+        <label for="email" id="email-label">
+          Email:
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="abc@gmail.com"
+            required
+          />
+        </label>
+        <label id="number-label" for="number">
+          How old are you? <input type="number" min=13 max=120 id="number"
+          name="age" pattern=(/^[0-9]+$/) placeholder="ex: 25" />
+        </label>
+      </fieldset>
+      <fieldset>
+        <label for="dropdown">
+          When did you start WebDev?
+          <select name="starting-year" id="dropdown">
+            <option value="" selected disabled>Select one</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+          </select>
+        </label>
+      </fieldset>
+      <fieldset>
+        <p class="radio">How many hours you program?</p>
+        <label for="10hrs+" class="radio-label">
+          <input
+            type="radio"
+            id="10hrs+"
+            name="programming-hrs"
+            class="inline"
+            value="10hrs+"
+          />More than 10hrs
+        </label>
+        <label for="10hrs-" class="radio-label">
+          <input
+            type="radio"
+            id="10hrs-"
+            name="programming-hrs"
+            class="inline"
+            value="10hrs-"
+          />Less than 10hrs
+        </label>
+        <label for="bio"
+          >Provide a bio:
+          <textarea
+            id="bio"
+            name="bio"
+            placeholder="I like coding on the beach..."
+          ></textarea>
+        </label>
+      </fieldset>
+      <fieldset class="terms-and-conditions">
+        <label for="terms-and-conditions">
+          <input
+            id="terms-and-conditions"
+            type="checkbox"
+            required
+            name="terms-and-conditions"
+            class="inline"
+            value="accept-terms&conditions"
+          />
+          I accept the
+          <a href="https://www.freecodecamp.org/news/terms-of-service/"
+            >terms and conditions</a
+          >
+        </label>
+        <label for="send-me-news">
+          <input
+            id="send-me-news"
+            type="checkbox"
+            name="send-me-news"
+            class="inline"
+            value="accept-sendingEmails"
+          />
+          I want to recieve email updates
+        </label>
+      </fieldset>
+      <input type="submit" id="submit" value="Submit" />
+    </form>
+  </body>
+</html>
